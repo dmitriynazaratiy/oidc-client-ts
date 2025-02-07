@@ -6,9 +6,6 @@
 /coverage/
 /docs/pages/
 
-**/dist/*
-/dist/esm/*
-
 # caches
 .eslintcache
 .cache
