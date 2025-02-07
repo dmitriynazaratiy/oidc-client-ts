@@ -119,9 +119,9 @@ export class OidcClient {
     }: CreateSigninRequestArgs): Promise<SigninRequest> {
         const logger = this._logger.create("createSigninRequest");
 
-        if (response_type !== "code") {
-            throw new Error("Only the Authorization Code flow (with PKCE) is supported");
-        }
+        // if (response_type !== "code") {
+        //     throw new Error("Only the Authorization Code flow (with PKCE) is supported");
+        // }
 
         const url = await this.metadataService.getAuthorizationEndpoint();
         logger.debug("Received authorization endpoint", url);

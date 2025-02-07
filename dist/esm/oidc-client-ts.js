@@ -1830,9 +1830,6 @@ var OidcClient = class {
     omitScopeWhenRequesting = this.settings.omitScopeWhenRequesting
   }) {
     const logger2 = this._logger.create("createSigninRequest");
-    if (response_type !== "code") {
-      throw new Error("Only the Authorization Code flow (with PKCE) is supported");
-    }
     const url = await this.metadataService.getAuthorizationEndpoint();
     logger2.debug("Received authorization endpoint", url);
     const signinRequest = await SigninRequest.create({
